@@ -67,7 +67,7 @@ BEGIN
 
     -- Checamos si es posible la eliminación
     IF num_rows > total_rows THEN
-        RAISE EXCEPTION 'Cannot delete more rows than the total number of rows in the table';
+        RAISE EXCEPTION 'No se pueden eliminar mas filas de las que hay en existencia';
     ELSE
         -- Procedemos con la eliminación de filas
         EXECUTE format('DELETE FROM backend_paises_detalle WHERE id IN (
