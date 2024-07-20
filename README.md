@@ -95,7 +95,34 @@ Esta función se encarga de recorrer la siguiente página <https://www.scrapethi
 
 ###### \* *En retrospectiva, ahora me doy cuenta de que hay una mejor solución para evitar duplicados y a la vez hacer del proceso mas rápido*
 Se presiono el botón para iniciar el webscrapping
+
 ![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv-w-1.png)
+
 Primer refresh pasado 30 segundos
+
 ![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv-w-2.png)
 
+Segundo refresh pasado 1min. Aqui el webscrapping ha terminado porque hasta el momento la cantidad total de registros dentro del sitio web es de 250 elementos.
+
+![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv-w-3.png)
+
+#### - Ordenar Alfabeticamente por nombre de País
+Por si se desea ordenar los países alfabeticamente para darle mayor orden al archivo csv
+![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv-o-1.png)
+
+#### - Guardar archivo CSV
+Agregue esta función porque a mi consideración este seria el **objetivo final** de dicho webscrapping. Poder obtener los datos de una página, filtrarlos y guardarlos para futuros análisis. 
+A continuación podemos ver un ejemplo de datos filtrados siendo guardados para su almacenamiento en un archivo .csv : 
+![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv-s-1.png)
+
+Este es el resultado final del archivo
+
+![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv-s-2.png)
+
+#### - Eliminación lógica de elementos
+Esta función practicamente oculta elementos a simple vista, poniendolos al final de la tabla y también evita que aparezcan en el archivo .csv. En la siguiente imagen podemos ver como los elementos ocultos estan al final de la lista
+
+![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/logdel1.png)
+
+Y si vemos el archivo .csv generado no aparecen dentro de este
+![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/logdel2.png)

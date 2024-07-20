@@ -30,7 +30,7 @@ const handleDelete = async (id, callback) => {
 
 const handleActivate = async (id, callback) => {
     try {
-        await axios.post(`${url}/api/paises_activate/${id}/`);
+        await axios.put(`${url}/api/paises_activate/${id}/`);
         callback();
     } catch (error) {
         console.error('Error al activar un pais:', error);

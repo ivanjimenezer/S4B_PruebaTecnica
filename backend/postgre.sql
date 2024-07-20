@@ -1,4 +1,7 @@
 
+
+-- ---------------------------------------------------------------------------
+-- ESTRUCTURA DE LA TABLA
 CREATE TABLE backend_paises_detalle (
   id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
   nombre varchar(100) NOT NULL,
@@ -20,6 +23,7 @@ SELECT * FROM information_schema.columns WHERE table_name = 'backend_paises_deta
 
 GRANT ALL PRIVILEGES ON DATABASE countries TO admin;
 -- ---------------------------------------------------------------------------
+-- Procedimiento para verificar duplicados
 DROP PROCEDURE IF EXISTS insert_verif_country(VARCHAR, VARCHAR, INTEGER, DOUBLE PRECISION);
 
 CREATE PROCEDURE insert_verif_country(
@@ -56,6 +60,7 @@ SELECT COUNT(*) FROM backend_paises_detalle;
 
 
 -- ---------------------------------------------------------------------------
+-- PROCEDIMIENTO PARA ELIMINAR DATOS ALEATORIOS
 CREATE OR REPLACE PROCEDURE delete_random_rows(num_rows INTEGER)
 LANGUAGE plpgsql
 AS $$
