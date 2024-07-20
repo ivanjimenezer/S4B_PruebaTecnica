@@ -91,7 +91,9 @@ Como podemos ver en la siguiente imagen, se han borrado satisfactoriamente 60 re
 ### - Funciones relacionadas a la generación del archivo CSV
 ![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv1.png)
 #### - Webscrapping
-Esta función se encarga de recorrer la siguiente página <https://www.scrapethissite.com/pages/simple/> y de obtener los datos de los paises. Su diseño es tal que previene la duplicación de datos por lo que verifica cada linea obtenida en la base de datos en búsqueda de una redundancia. Este proceso es lento y se ejecuta en el background. 
+Esta función se encarga de recorrer la siguiente página <https://www.scrapethissite.com/pages/simple/> y de obtener los datos de los paises. Solo se puede hacer WebScrapping cuando la cantidad total de registros de la BD sea menor a 250. Es por ello que se diseño la función de eliminación aleatoria, para poner a prueba el webscrapping de datos.
+
+El diseño de la función es tal que previene la duplicación de datos por lo que verifica cada linea obtenida en la base de datos en búsqueda de una redundancia. Este proceso es lento y se ejecuta en el background. 
 
 ###### \* *En retrospectiva, ahora me doy cuenta de que hay una mejor solución para evitar duplicados y a la vez hacer del proceso mas rápido*
 Se presiono el botón para iniciar el webscrapping
@@ -126,3 +128,12 @@ Esta función practicamente oculta elementos a simple vista, poniendolos al fina
 
 Y si vemos el archivo .csv generado no aparecen dentro de este
 ![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/logdel2.png)
+
+#### - Activacion de elementos
+
+Es el opuesto a la funcionalidad anterior, en caso de que queramos desocultar un elemento entonces presionamos el botón verde:
+
+![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv-a-1.png)
+
+Ahora los elementos activados pueden aparecer en el archivo .csv
+![Image](https://github.com/ivanjimenezer/S4B_PruebaTecnica/blob/main/media/csv-a-2.png)
